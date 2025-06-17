@@ -25,8 +25,8 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ---    | ---                                                                           | ---                 | ---                                      |
 | ☑      | [Tutorial](https://tryhackme.com/room/tutorial)                               | Intro               |                                          |
 | ☑      | [OpenVPN](https://tryhackme.com/room/openvpn)                                 | Intro               |                                          |
-| ☐      | [Welcome](https://tryhackme.com/jr/welcome)                                   | Intro               | [done](write-ups/level1/Welcome)         |
-| ☐      | [Starting Out In Cyber Sec](https://tryhackme.com/room/startingoutincybersec) | Intro               |                                          |
+| ☑      | [Welcome](https://tryhackme.com/jr/welcome)                                   | Intro               | [done](write-ups/level1/Welcome)         |
+| ☑      | [Starting Out In Cyber Sec](https://tryhackme.com/room/startingoutincybersec) | Intro               |                                          |
 | ☐      | [Intro to Researching](https://tryhackme.com/room/introtoresearch)            | Intro               |                                          |
 | ☐      | [Google Dorking](https://tryhackme.com/room/googledorking)                    | Intro               |                                          |
 | ☐      | [The Hacker Methodology](https://tryhackme.com/room/hackermethodology)        | Intro               |                                          |
@@ -55,7 +55,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☐      | [The Cod Caper](https://tryhackme.com/room/thecodcaper)                       | CTF                 |                                          |
 | ☐      | [Ice](https://tryhackme.com/room/ice)                                         | CTF                 |                                          |
 | ☐      | [Lazy Admin](https://tryhackme.com/room/lazyadmin)                            | CTF                 | [done](write-ups/level3/Lazy%20Admin)    |
-| ☐      | [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)              | CTF                 |                                          |
+| ☑       | [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)              | CTF                 |                                          |
 | ☐      | [Post Exploitation Basics](https://tryhackme.com/room/postexploit)            | CTF                 |                                          |
 | ☐      | [Dogcat](https://tryhackme.com/room/dogcat)                                   | CTF                 |                                          |
 | ☐      | [Buffer Overflow Prep](https://tryhackme.com/room/bufferoverflowprep)         | CTF                 |                                          |
