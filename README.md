@@ -94,7 +94,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☐      | [Ignite](https://tryhackme.com/room/ignite)                                   | PrivEsc             |                                          |
 | ☐      | [Kenobi](https://tryhackme.com/room/kenobi)                                   | PrivEsc             |                                          |
 | ☐      | [c4ptur3-th3-fl4g](https://tryhackme.com/room/c4ptur3th3fl4g)                 | PrivEsc             |                                          |
-| ☐      | [Pickle Rick](https://tryhackme.com/room/picklerick)                          | PrivEsc             | [done](write-ups/level7/Pickle%20Rick)   |
+| ☑      | [Pickle Rick](https://tryhackme.com/room/picklerick)                          | PrivEsc             | [done](write-ups/level7/Pickle%20Rick)   |
 | ☐      | [Overpass 3 - Hosting](https://tryhackme.com/room/overpass3hosting)           | PrivEsc             |                                          |
 | ☐      | [Active Directory Basics](https://tryhackme.com/room/winadbasics)             | Windows             |                                          |
 | ☐      | [Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)        | Windows             |                                          |
