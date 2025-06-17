@@ -24,7 +24,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | Status | Room Title                                                                    | Category            | Write-up                                 |
 | ---    | ---                                                                           | ---                 | ---                                      |
 | ☑      | [Tutorial](https://tryhackme.com/room/tutorial)                               | Intro               |                                          |
-| ☐      | [OpenVPN](https://tryhackme.com/room/openvpn)                                 | Intro               |                                          |
+| ☑      | [OpenVPN](https://tryhackme.com/room/openvpn)                                 | Intro               |                                          |
 | ☐      | [Welcome](https://tryhackme.com/jr/welcome)                                   | Intro               | [done](write-ups/level1/Welcome)         |
 | ☐      | [Starting Out In Cyber Sec](https://tryhackme.com/room/startingoutincybersec) | Intro               |                                          |
 | ☐      | [Intro to Researching](https://tryhackme.com/room/introtoresearch)            | Intro               |                                          |
