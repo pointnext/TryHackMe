@@ -27,10 +27,10 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☑      | [OpenVPN](https://tryhackme.com/room/openvpn)                                 | Intro               |                                          |
 | ☑      | [Welcome](https://tryhackme.com/jr/welcome)                                   | Intro               | [done](write-ups/level1/Welcome)         |
 | ☑      | [Starting Out In Cyber Sec](https://tryhackme.com/room/startingoutincybersec) | Intro               |                                          |
-| ☐      | [Intro to Researching](https://tryhackme.com/room/introtoresearch)            | Intro               |                                          |
-| ☐      | [Google Dorking](https://tryhackme.com/room/googledorking)                    | Intro               |                                          |
-| ☐      | [The Hacker Methodology](https://tryhackme.com/room/hackermethodology)        | Intro               |                                          |
-| ☐      | [Pentesting Fundamentals](https://tryhackme.com/room/pentestingfundamentals)  | Intro               |                                          |
+| ☑      | [Intro to Researching](https://tryhackme.com/room/introtoresearch)            | Intro               |                                          |
+| ☑      | [Google Dorking](https://tryhackme.com/room/googledorking)                    | Intro               |                                          |
+| ☑      | [The Hacker Methodology](https://tryhackme.com/room/hackermethodology)        | Intro               |                                          |
+| ☑      | [Pentesting Fundamentals](https://tryhackme.com/room/pentestingfundamentals)  | Intro               |                                          |
 | ☑      | [Linux Fundamentals 1](https://tryhackme.com/room/linuxfundamentalspart1)     | Intro               |                                          |
 | ☐      | [Windows Fundamentals](https://tryhackme.com/module/windows-fundamentals)     | Intro               |                                          |
 | ☐      | [Red Team Fundamentals](https://tryhackme.com/room/redteamfundamentals)       | Intro               |                                          |
