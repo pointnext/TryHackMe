@@ -44,7 +44,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☐      | [Burp Suite: The Basics](https://tryhackme.com/room/burpsuitebasics)          | Tooling             |                                          |
 | ☐      | [Burp Suite: Repeater](https://tryhackme.com/room/burpsuiterepeater)          | Tooling             |                                          |
 | ☐      | [Introduction to OWASP ZAP](https://tryhackme.com/room/learnowaspzap)         | Tooling             |                                          |
-| ☐      | [OHsint](https://tryhackme.com/room/ohsint)                                   | CTF                 |                                          |
+| ☑      | [OHsint](https://tryhackme.com/room/ohsint)                                   | CTF                 |                                          |
 | ☐      | [Vulnversity](https://tryhackme.com/room/vulnversity)                         | CTF                 |                                          |
 | ☐      | [Blue](https://tryhackme.com/room/blue)                                       | CTF                 |                                          |
 | ☐      | [Simple CTF](https://tryhackme.com/room/easyctf)                              | CTF                 |                                          |
