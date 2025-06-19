@@ -306,6 +306,9 @@ A.flag{sam_database_elevated_access}
 
 a quick google found the folder c:\windows\system32\config
 then just type the file out
+```bash
+type c:\windows\system32\config\flag2.txt
+```
 
 Q. flag3 - This flag can be found in an excellent location to loot. After all, Administrators usually have pretty interesting things saved. 
 A. flag{admin_documents_can_be_valuable}
