@@ -1,9 +1,9 @@
 06/16/2025
 
-''Vulnversity
+# Vulnversity
 Note: Box seemed very unstable and constantly dropping packets. Ping reponse is less than 70% even after waiting 10 mins. Grrr
 
-'''TASK 1
+# 'TASK 1
 
 Fire up the box and wait a bit for pings to return
 Create working folder and nmap folder
