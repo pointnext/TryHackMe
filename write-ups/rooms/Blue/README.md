@@ -297,10 +297,10 @@ john hash --wordlist=/usr/share/wordlists/rockyou.txt -format=NT
 
 Q. flag 1 - This flag can be found at the system root. 
 A. flag{access_the_machine}
-
+```bash
 dir \ flag1.txt /s
 type c:\flag1.txt
-
+```
 Q. flag2 - This flag can be found at the location where passwords are stored within Windows
 A.flag{sam_database_elevated_access}
 
@@ -309,6 +309,7 @@ then just type the file out
 
 Q. flag3 - This flag can be found in an excellent location to loot. After all, Administrators usually have pretty interesting things saved. 
 A. flag{admin_documents_can_be_valuable}
-
+```bash
 dir \ flag3.txt /s
 type c:\users\adminstrator\documents\flag3.txt
+``
