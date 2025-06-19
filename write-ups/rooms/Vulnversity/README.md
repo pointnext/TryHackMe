@@ -1,9 +1,9 @@
 06/16/2025
 
-Vulnversity
+''Vulnversity
 Note: Box seemed very unstable and constantly dropping packets. Ping reponse is less than 70% even after waiting 10 mins. Grrr
 
-''TASK 1
+'''TASK 1
 
 Fire up the box and wait a bit for pings to return
 Create working folder and nmap folder
@@ -12,7 +12,7 @@ Setup IP variable for simplicity
 Export IP=<ip address>
 10.10.101.248
 
-''TASK 2
+'''TASK 2
 
 Q. Scan the box; 
 #Nmap scan
@@ -77,7 +77,7 @@ A. -v
 Q. What is the directory that has an upload form page?
 A. /internal/
 
-''TASK 4
+'''TASK 4
 
 Q. What common file type you'd want to upload to exploit the server is blocked? Try a couple to find out.
 A. .php
@@ -91,7 +91,7 @@ A. bill
 Q. What is the user flag?
 A. 8bd7992fbe8a6ad22a63361004cfcedb
 
-''TASK 5
+'''TASK 5
 
 Q. On the system, search for all SUID files. Which file stands out?
 A. /bin/systemctl
