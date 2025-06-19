@@ -108,7 +108,7 @@ A. 8bd7992fbe8a6ad22a63361004cfcedb
 
 Q. On the system, search for all SUID files. Which file stands out?
 
-A. go to https://gtfobins.github.io/gtfobins/systemctl/ to find answer = /bin/systemctl
+A. go to https://gtfobins.github.io/ to find answer = /bin/systemctl
 
 find / -type f -perm -04000 -ls 2>/dev/null
    396628     44 -rwsr-xr-x   1 root     root        41552 Feb  6  2024 /usr/bin/newuidmap
@@ -150,9 +150,7 @@ Q. What is the root flag value?
 
 A. a58ff8579f0a9270368d33a9966c7fd5
 
-#Check Gtfobins for SUID escalation script
-
-
+#Check Gtfobins for SUID escalation script - https://gtfobins.github.io/gtfobins/systemctl/
 
 Move to a writeable directory - I used /tmp
 
