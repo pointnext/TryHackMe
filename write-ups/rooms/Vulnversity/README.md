@@ -84,6 +84,8 @@ Q. What is the directory that has an upload form page?
 
 A. /internal/
 
+gobuster dir -w /usr/share/wordlist/dirbuster/directory-1.3.1-small.txt -u http://<ipaddres>:3333
+
 # TASK 4
 
 Q. What common file type you'd want to upload to exploit the server is blocked? Try a couple to find out.
