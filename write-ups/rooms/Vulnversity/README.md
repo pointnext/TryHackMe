@@ -1,7 +1,6 @@
 06/16/2025
 
 # Vulnversity
-Note: Box seemed very unstable and constantly dropping packets. Ping reponse is less than 70% even after waiting 10 mins. Grrr
 
 # TASK 1
 
