@@ -54,9 +54,9 @@ There's nothing on the web site and dirbuster produced no new subdirectories. le
 
 ```bash
 ftp anonymous@10.10.14.22
-mget *.txt
+ls
 ```
-task.txt
+less task.txt
 ```
 1.) Protect Vicious.
 2.) Plan for Red Eye pickup on the moon.
@@ -64,7 +64,7 @@ task.txt
 -lin
 ```
 
-locks.txt
+less locks.txt
 ```
 rEddrAGON
 ReDdr4g0nSynd!cat3
