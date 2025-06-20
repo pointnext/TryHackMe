@@ -82,7 +82,7 @@ etc......
 Q. What service can you bruteforce with the text file found? 
 A. SSH
 
-Now we have her username we can attack ssh with hydra
+Now we have her username we can attack ssh with hydra. Also the locks.txt file looks like passwords. Let's try those first.
 
 Q. What is the users password?
 A. RedDr4gonSynd1cat3
