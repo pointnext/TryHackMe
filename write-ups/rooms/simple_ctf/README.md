@@ -76,7 +76,8 @@ A. secret
 First lets grab the exploit code. Nist provides two sites. I prefer exploit-db - https://www.exploit-db.com/exploits/46635
 
 ```
-Ran this with Python3 and I kept getting an argument error. After looking at the code I see that it was using some really old libraries and syntax. Time for a quick rewrite! I have posted the new version on my github. It now works with Pyhton3 (out of the box) on Kali as of 6/18/2025
+Ran this with Python3 and I kept getting an argument error. After looking at the code I see that it was using some really old libraries and syntax.
+Time for a quick rewrite! I have posted the new version in the root of write-ups. It now works with Pyhton3 (out of the box) on Kali as of 6/18/2025
 ```
 
 Running the updated code provides
