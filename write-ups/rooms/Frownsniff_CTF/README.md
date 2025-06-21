@@ -238,7 +238,7 @@ users baksteen
 
 Now lets looks for files
 
-``bash
+```bash
 find / -type f -name *.sh -group users 2>/dev/null
 ```
 
@@ -248,9 +248,7 @@ find / -type f -name *.sh -group users 2>/dev/null
 /opt/cube/cube.sh
 ```
 
-If you check /etc/update-motd.d/00-header
-you'll see that this invoked the cude.sh
-let's add the reverse shell TRH gave us to cube.sh
+If you check /etc/update-motd.d/00-header you'll see that this invoked the cude.sh. Let's nano cube.sh and add the reverse shell TRH gave us, replacing IP for our IP address.
 
 ## 🐚 Add Reverse Shell Payload
 
