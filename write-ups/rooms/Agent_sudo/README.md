@@ -102,7 +102,7 @@ StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
 [i] Found passphrase: "Area51"           
 [i] Original filename: "message.txt".
 [i] Extracting to "cute-alien.jpg.out".
-
+```
 **results**
 ```
 Hi james,
@@ -116,14 +116,13 @@ chris
 ```
 Now we have an SSH login for `james`.
 
-```
-but first, lets look at cutie.png
+But first, lets look at cutie.png
 stegseek nor steghide support png. instead we'll use binwalk
 
 ```bash
 binwalk -e cutie.png
 ```
-Extracted a ZIP file.
+Extracted a ZIP file called "8702.zip"
 
 Crack the zip password using John the Ripper:
 
@@ -139,7 +138,12 @@ alien            (8702.zip/To_agentR.txt)
 
 **Q. Zip file password
 A. alien
-*Read T-AgentR.txt*
+
+Now let's open the zip file with the password obtained
+```bash
+7z e 8702.zip
+```
+**Results**
 ```
 Agent C,
 
