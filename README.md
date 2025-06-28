@@ -56,7 +56,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☑      | [Ice](https://tryhackme.com/room/ice)                                         | CTF                 |       [done](write-ups/rooms/ice)        |
 | ☑      | [Lazy Admin](https://tryhackme.com/room/lazyadmin)                            | CTF                 |    [done](write-ups/rooms/Lazy_admin)    |
 | ☑      | [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)              | CTF                 |                                          |
-| ☐      | [Post Exploitation Basics](https://tryhackme.com/room/postexploit)            | CTF                 |                                          |
+| ☑      | [Post Exploitation Basics](https://tryhackme.com/room/postexploit)            | CTF                 |                                          |
 | ☐      | [Buffer Overflow Prep](https://tryhackme.com/room/bufferoverflowprep)         | CTF                 |                                          |
 | ☑      | [Break out the cage](https://tryhackme.com/room/breakoutthecage1)             | CTF - Easy          |[done](write-ups/rooms/Break_out_the_cage)|
 | ☑      | [Lian Yu](https://tryhackme.com/room/lianyu)                                  | CTF - Easy          |                                          |
