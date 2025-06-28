@@ -60,7 +60,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☐      | [Buffer Overflow Prep](https://tryhackme.com/room/bufferoverflowprep)         | CTF                 |                                          |
 | ☑      | [Break out the cage](https://tryhackme.com/room/breakoutthecage1)             | CTF - Easy          |[done](write-ups/rooms/Break_out_the_cage)|
 | ☑      | [Lian Yu](https://tryhackme.com/room/lianyu)                                  | CTF - Easy          |                                          |
-| ☐      | [B3dr0ck](https://tryhackme.com/room/b3dr0ck)                                 | CTF - Easy          |     [done](write-ups/rooms/b3dr0ck)      |
+| ☑      | [B3dr0ck](https://tryhackme.com/room/b3dr0ck)                                 | CTF - Easy          |     [done](write-ups/rooms/b3dr0ck)      |
 | ☐      | [Startup](https://tryhackme.com/room/startup)                                 | CTF - Easy          |                                          |
 | ☐      | [Year of the Rabbit](https://tryhackme.com/room/yearoftherabbit)              | CTF - Easy          |                                          |
 | ☐      | [Mr Robot CTF](https://tryhackme.com/room/mrrobot)                            | CTF - Medium        |                                          |
