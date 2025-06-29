@@ -70,7 +70,6 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☐      | [Buffer Overflow Prep](https://tryhackme.com/room/bufferoverflowprep)         | CTF - Medium        |                                          |
 | ☐      | [Internal](https://tryhackme.com/room/internal)                               | CTF - Hard          |                                          |
 | ☑      | [Crack the hash](https://tryhackme.com/room/crackthehash)                     | Cryptography        |                                          |
-| ☐      | [Walking An Application](https://tryhackme.com/room/walkinganapplication)     | Web                 |                                          |
 | ☐      | [OWASP Top 10](https://tryhackme.com/room/owasptop10)                         | Web                 |                                          |
 | ☐      | [OWASP Top 10 - 2021](https://tryhackme.com/room/owasptop102021)              | Web                 |                                          |
 | ☐      | [OWASP Juice Shop](https://tryhackme.com/room/owaspjuiceshop)                 | Web                 |                                          |
@@ -127,6 +126,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 <!-- | ☐      | [CC Steganography](https://tryhackme.com/room/ccstego)                   | Reverse Engineering |                                          | -->
 <!-- | ☐      | [Reverse Engineering](https://tryhackme.com/room/reverseengineering)     | Reverse Engineering |                                          | -->
 <!-- | ☐      | [Burp Suite: The Basics](https://tryhackme.com/room/burpsuitebasics)     | Tooling             |                                          | -->
+<!-- | ☐      | [Walking An Application](https://tryhackme.com/room/walkinganapplication)| Web                 |                                          | -->
 
 <details>
   <summary>
