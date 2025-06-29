@@ -39,9 +39,8 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☑      | [Metasploit: Introduction](https://tryhackme.com/room/metasploitintro)        | Tooling             |                                          |
 | ☑      | [Hydra](https://tryhackme.com/room/hydra)                                     | Tooling             |                                          |
 | ☑      | [Linux PrivEsc](https://tryhackme.com/room/linuxprivesc)                      | Tooling             |                                          |
-| ☐      | [Shodan.io](https://tryhackme.com/room/shodan)                                | Tooling             |                                          |
+| ☑      | [Shodan.io](https://tryhackme.com/room/shodan)                                | Tooling             |                                          |
 | ☐      | [RustScan](https://tryhackme.com/room/rustscan)                               | Tooling             |                                          |
-| ☐      | [Burp Suite: The Basics](https://tryhackme.com/room/burpsuitebasics)          | Tooling             |                                          |
 | ☐      | [Burp Suite: Repeater](https://tryhackme.com/room/burpsuiterepeater)          | Tooling             |                                          |
 | ☐      | [Introduction to OWASP ZAP](https://tryhackme.com/room/learnowaspzap)         | Tooling             |                                          |
 | ☑      | [OHsint](https://tryhackme.com/room/ohsint)                                   | CTF                 |                                          |
@@ -61,8 +60,8 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☑      | [Break out the cage](https://tryhackme.com/room/breakoutthecage1)             | CTF - Easy          |[done](write-ups/rooms/Break_out_the_cage)|
 | ☑      | [Lian Yu](https://tryhackme.com/room/lianyu)                                  | CTF - Easy          |                                          |
 | ☑      | [B3dr0ck](https://tryhackme.com/room/b3dr0ck)                                 | CTF - Easy          |     [done](write-ups/rooms/b3dr0ck)      |
-| ☐      | [Startup](https://tryhackme.com/room/startup)                                 | CTF - Easy          |                                          |
-| ☐      | [Year of the Rabbit](https://tryhackme.com/room/yearoftherabbit)              | CTF - Easy          |                                          |
+| ☑      | [Startup](https://tryhackme.com/room/startup)                                 | CTF - Easy          |                                          |
+| ☑      | [Year of the Rabbit](https://tryhackme.com/room/yearoftherabbit)              | CTF - Easy          |                                          |
 | ☐      | [Mr Robot CTF](https://tryhackme.com/room/mrrobot)                            | CTF - Medium        |                                          |
 | ☐      | [Dogcat](https://tryhackme.com/room/dogcat)                                   | CTF - Medium        |                                          |
 | ☐      | [Eavesdropped](https://tryhackme.com/room/eavesdropper)                       | CTF - Medium        |                                          |
@@ -127,6 +126,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 <!-- | ☐      | [CC Radare2](https://tryhackme.com/room/ccradare2)                       | Reverse Engineering |                                          | -->
 <!-- | ☐      | [CC Steganography](https://tryhackme.com/room/ccstego)                   | Reverse Engineering |                                          | -->
 <!-- | ☐      | [Reverse Engineering](https://tryhackme.com/room/reverseengineering)     | Reverse Engineering |                                          | -->
+<!-- | ☐      | [Burp Suite: The Basics](https://tryhackme.com/room/burpsuitebasics)     | Tooling             |                                          | -->
 
 <details>
   <summary>
