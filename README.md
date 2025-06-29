@@ -63,7 +63,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☑      | [B3dr0ck](https://tryhackme.com/room/b3dr0ck)                                 | CTF - Easy          |     [done](write-ups/rooms/b3dr0ck)      |
 | ☑      | [Startup](https://tryhackme.com/room/startup)                                 | CTF - Easy          |                                          |
 | ☑      | [Year of the Rabbit](https://tryhackme.com/room/yearoftherabbit)              | CTF - Easy          |                                          |
-| ☐      | [Mr Robot CTF](https://tryhackme.com/room/mrrobot)                            | CTF - Medium        |                                          |
+| ☑      | [Mr Robot CTF](https://tryhackme.com/room/mrrobot)                            | CTF - Medium        |      [done](write-ups/rooms/MrRobot)     |
 | ☐      | [Dogcat](https://tryhackme.com/room/dogcat)                                   | CTF - Medium        |                                          |
 | ☐      | [Eavesdropped](https://tryhackme.com/room/eavesdropper)                       | CTF - Medium        |                                          |
 | ☐      | [Ollie](https://tryhackme.com/room/ollie)                                     | CTF - Medium        |                                          |
