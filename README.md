@@ -64,9 +64,9 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☑      | [Startup](https://tryhackme.com/room/startup)                                 | CTF - Easy          |                                          |
 | ☑      | [Year of the Rabbit](https://tryhackme.com/room/yearoftherabbit)              | CTF - Easy          |                                          |
 | ☑      | [Mr Robot CTF](https://tryhackme.com/room/mrrobot)                            | CTF - Medium        |      [done](write-ups/rooms/MrRobot)     |
-| ☐      | [Dogcat](https://tryhackme.com/room/dogcat)                                   | CTF - Medium        |                                          |
-| ☐      | [Eavesdropped](https://tryhackme.com/room/eavesdropper)                       | CTF - Medium        |                                          |
-| ☐      | [Ollie](https://tryhackme.com/room/ollie)                                     | CTF - Medium        |                                          |
+| ☑      | [Dogcat](https://tryhackme.com/room/dogcat)                                   | CTF - Medium        |      [done](write-ups/rooms/Dogcat)      |
+| ☑      | [Eavesdropped](https://tryhackme.com/room/eavesdropper)                       | CTF - Medium        |   [done](write-ups/rooms/Eavesdropper)   |
+| ☑      | [Ollie](https://tryhackme.com/room/ollie)                                     | CTF - Medium        |       [done](write-ups/rooms/Ollie)      |
 | ☐      | [VulnNet: Active](https://tryhackme.com/room/vulnnetactive)                   | CTF - Medium        |                                          |
 | ☐      | [Buffer Overflow Prep](https://tryhackme.com/room/bufferoverflowprep)         | CTF - Medium        |                                          |
 | ☐      | [Internal](https://tryhackme.com/room/internal)                               | CTF - Hard          |                                          |
