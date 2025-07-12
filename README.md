@@ -85,9 +85,8 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☐      | [Reversing ELF](https://tryhackme.com/room/reverselfiles)                     | Reverse Engineering |                                          |
 | ☐      | [Dumping Router Firmware](https://tryhackme.com/room/rfirmware)               | Reverse Engineering |                                          |
 | ☐      | [Brainpam 1](https://tryhackme.com/room/brainpan)                             | Reverse Engineering |                                          |
-| ☐      | [Introduction to Networking](https://tryhackme.com/room/introtonetworking)    | Networking          |                                          |
-| ☐      | [Intro to LAN](https://tryhackme.com/room/introtolan)                         | Networking          |                                          |
-| ☐      | [HTTP in detail](https://tryhackme.com/room/httpindetail)                     | Networking          |                                          |
+| ☑      | [Introduction to Networking](https://tryhackme.com/room/introtonetworking)    | Networking          |                                          |
+| ☑      | [HTTP in detail](https://tryhackme.com/room/httpindetail)                     | Networking          |                                          |
 | ☐      | [DNS in detail](https://tryhackme.com/room/dnsindetail)                       | Networking          |                                          |
 | ☐      | [Smag Grotto](https://tryhackme.com/room/smaggrotto)                          | Networking          |                                          |
 | ☐      | [Overpass 2 - Hacked](https://tryhackme.com/room/overpass2hacked)             | Networking          |                                          |
@@ -117,6 +116,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☐      | [Advent of Cyber Year 4](https://tryhackme.com/room/adventofcyber4)           | Other               |                                          |
 
 <!-- Rooms that where made private: -->
+<!-- | ☐      | [Intro to LAN](https://tryhackme.com/room/introtolan)                    | Networking          |                                          | -->
 <!-- | ☐      | [Principles of Security](https://tryhackme.com/room/principlesofsecurity)| Intro               |                                          | -->
 <!-- | ☐      | [Crash Course Pentesting](https://tryhackme.com/room/ccpentesting)       | Intro               |                                          | -->
 <!-- | ☐      | [Sublist3r](https://tryhackme.com/room/rpsublist3r)                      | Tooling             |                                          | -->
