@@ -151,7 +151,7 @@ Things to try
 
 ### 1. sudo -l
 
-Nope it asked for a password. I did run the overpass utility and to expert all passwords. A password was provided!. However, this is not the root password but the one for james. I tried using the password and it worked but we're not in the sudoers group.
+Nope it asked for a password. I did run the overpass test utility and to export all passwords. A password was provided!. However, this is not the root password but the one for james. I tried using the password and it worked but we're not in the sudoers group.
 
 ```
 Password for Jaames: saydrawnlyingpicture
