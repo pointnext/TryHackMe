@@ -93,6 +93,7 @@ It worked! We're now presented with an SSH private key for james (from paradox).
 
 **Results:**
 ```
+chmod 600 id_rsa
 sh -i id_rsa james@10.10.208.137
 The authenticity of host '10.10.208.137 (10.10.208.137)' can't be established.
 ED25519 key fingerprint is SHA256:FhrAF0Rj+EFV1XGZSYeJWf5nYG0wSWkkEGSO5b+oSHk.
