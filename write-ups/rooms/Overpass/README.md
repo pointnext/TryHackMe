@@ -232,7 +232,7 @@ I cannot access the file so I can't change it. Perhaps I can trick the server to
 
 This is the plan. 
 
-I'll create a web server on my attacker PC on port 80. This will server the script buildscript.sh. However, it'll be my version of the script which is just a revershell. I'll then create nc listener on my attacker PC. 
+I'll create a web server on my attacker PC on port 80. This will serve the script buildscript.sh. However, it'll be my version of the script which is just a revershell. I'll then create nc listener on my attacker PC. 
 The final step will be to edit the server's hosts file and change from the loopback address to my attacker machine.
 
 What should happen is the server will connect to my attacker PC on port 80. Download and run my version of the script. Executing a reverse shell back to my attacker PC as root!
