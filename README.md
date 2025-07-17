@@ -74,8 +74,8 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 | ☐      | [OWASP Top 10](https://tryhackme.com/room/owasptop10)                         | Web                 |                                          |
 | ☐      | [OWASP Top 10 - 2021](https://tryhackme.com/room/owasptop102021)              | Web                 |                                          |
 | ☐      | [OWASP Juice Shop](https://tryhackme.com/room/owaspjuiceshop)                 | Web                 |                                          |
-| ☐      | [Ignite](https://tryhackme.com/room/ignite)                                   | Web                 |                                          |
-| ☑      | [Overpass](https://tryhackme.com/room/overpass)                               | Web                 |    [done](write-ups/rooms/Overpass)     |
+| ☑      | [Ignite](https://tryhackme.com/room/ignite)                                   | Web                 |    [done](write-ups/rooms/Ignite)        |
+| ☑      | [Overpass](https://tryhackme.com/room/overpass)                               | Web                 |    [done](write-ups/rooms/Overpass)      |
 | ☐      | [Bolt](https://tryhackme.com/room/bolt)                                       | Web                 |                                          |
 | ☐      | [Corridor](https://tryhackme.com/room/corridor)                               | Web                 |                                          |
 | ☐      | [DevelPy](https://tryhackme.com/room/bsidesgtdevelpy)                         | Web                 |                                          |
